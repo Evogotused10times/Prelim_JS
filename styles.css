@@ -1,0 +1,337 @@
+body, h1, h2, ul, li, input, button {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2C2C2C; /* Dark Charcoal Gray for the body background */
+}
+
+header {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    padding: 15px 20px;
+    background-color: #1D4E89; /* Deep Blue for the header */
+    box-shadow: 0 0 10px rgba(29, 78, 137, 0.8); /* Deep Blue shadow */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #FFFFFF;
+    font-size: 24px;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+    color: #39FF14; 
+}
+
+.container {
+    max-width: 94%;
+    margin: 20px auto;
+    padding: 20px;
+    background: linear-gradient(150deg, #1D4E89, #2C2C2C, #39FF14); 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(201, 201, 201);
+}
+
+h2 {
+    color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid #DFDFDF;
+    padding-bottom: 10px;
+}
+
+.add-item-form {
+    margin-top: 20px;
+}
+
+.add-item-form div {
+    margin-bottom: 15px;
+}
+
+.add-item-form label {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.add-item-form input {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #333;
+    color: rgb(255, 255, 255);
+}
+
+.add-item-form button {
+    background-color: #FF6600; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-item-form button:hover {
+    background-color: #3a8f32;
+}
+
+#available-items {
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart {
+    padding: 5px;
+    color: #c4c1c1;
+}
+
+.cart-item-image {
+    width: 100px;
+}
+
+#cart-total {
+
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #dddddd; 
+}
+
+.checkout {
+    margin-top: 20px;
+}
+
+.checkout button {
+    background-color: #1D4E89; 
+    border: none;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.checkout button:hover {
+    background-color: #39FF14; 
+}
+
+.items-grid {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.available-item {
+    border: 1px solid #ddd;
+    border-radius: 60px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: linear-gradient(140deg, #1D4E89, #39FF14, #FF6600);
+    transition: transform 0.3s; 
+}
+
+.available-item:hover {
+    transform: translateY(15px);
+}
+
+.available-item-image {
+    margin: 10px auto;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.available-item-details {
+    padding: 10px;
+    text-align: center;
+}
+
+.available-item-title {
+    font-size: 1.2em;
+    margin: 0;
+    color: white;
+}
+
+.available-item-price {
+    font-size: 1.1em;
+    color: #FF6600; 
+    margin: 10px 0;
+}
+
+.available-item button {
+    background-color: #1D4E89; 
+    color: white;
+    border: none;
+    padding: 15px 76px;
+    font-size: 15px;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-top: 5px;
+    transition: background-color 0.3s;
+}
+
+.available-item button:hover {
+    background-color: #39FF14; 
+}
+
+.remove {
+    width: 100px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    border: #1D4E89;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FF6600; 
+}
+
+.remove:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.edit {
+    width: 100px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    border: #1D4E89;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: #FF6600; 
+}
+
+.edit:hover {
+    background-color: rgb(9, 255, 0); 
+}
+
+.search-bar input {
+    padding: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 3px 0 0 3px;
+    width: 200px;
+    background-color: #333;
+    color: white;
+}
+
+.search-bar button {
+    font-family: 'Poppins', sans-serif;
+    padding: 5px 10px;
+    border: 0px solid #f0eeed;
+    border-radius: 0 3px 3px 0;
+    background-color: #39FF14; 
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-bar button:hover {
+    background-color: #1D4E89;
+}
+
+h3 {
+    text-align: left;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+}
+
+.pahibalo {
+    color: #c4c1c1;
+    font-family: 'Poppins', sans-serif;
+}
+
+#towns, #payment {
+    font-family: 'Poppins', sans-serif;
+    background-color: #333;
+    border-radius: 10px;
+    color: white;
+    width: 200px;
+    padding: 5px;
+}
+
+footer {
+    color: white;
+    background-color: #1D4E89; 
+    padding: 5px;
+    box-shadow: 0 0 20px rgba(29, 78, 137, 0.5); 
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+.filter-bar {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px auto;
+    padding: 5px;
+    background-color: #39FF14; 
+    box-shadow: 0 0 6px rgba(57, 255, 20, 0.8); 
+}
+
+.filter-bar label {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.filter-bar select {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-right: 20px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #333;
+    color: white;
+}
+
+.filter-bar select:focus {
+    border-color: #1D4E89; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(29, 78, 137, 0.5);
+}

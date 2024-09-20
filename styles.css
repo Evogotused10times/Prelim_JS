@@ -6,16 +6,16 @@ body, h1, h2, ul, li, input, button {
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #2C2C2C; /* Dark Charcoal Gray for the body background */
+    font-family: 'Poppins', sans-serif;
+    background-color: #313131; 
 }
 
 header {
     font-family: 'Poppins', sans-serif;
     color: white;
     padding: 15px 20px;
-    background-color: #1D4E89; /* Deep Blue for the header */
-    box-shadow: 0 0 10px rgba(29, 78, 137, 0.8); /* Deep Blue shadow */
+    background-color: #1D4E89; 
+    box-shadow: 0 0 10px rgba(29, 78, 137, 0.8); 
 }
 
 .header-container {
@@ -25,6 +25,7 @@ header {
 }
 
 header h1 {
+    font-family: 'Pacifico', sans-serif;
     color: #FFFFFF;
     font-size: 24px;
     margin: 0;
@@ -87,6 +88,14 @@ h2 {
     font-weight: bold;
 }
 
+.town-payment label {
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
 .add-item-form input {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -119,6 +128,7 @@ h2 {
 }
 
 .cart {
+    align-items: center;
     padding: 5px;
     color: #c4c1c1;
 }
@@ -128,7 +138,6 @@ h2 {
 }
 
 #cart-total {
-
     margin-top: 20px;
     font-size: 18px;
     font-weight: lighter;
@@ -203,7 +212,7 @@ h2 {
     background-color: #1D4E89; 
     color: white;
     border: none;
-    padding: 15px 76px;
+    padding: 15px 72px;
     font-size: 15px;
     border-radius: 0px;
     cursor: pointer;
@@ -281,7 +290,7 @@ h3 {
     font-family: 'Poppins', sans-serif;
 }
 
-#towns, #payment {
+#towns, #payments {
     font-family: 'Poppins', sans-serif;
     background-color: #333;
     border-radius: 10px;

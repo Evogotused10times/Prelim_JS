@@ -205,11 +205,22 @@ function removeFromCart(index) {
 
 function checkout() {
     const selectedTownFee = parseFloat(document.getElementById("towns").value);
+    const paymentMethod = document.getElementById("payments").value;
     const finalTotal = totalPrice + selectedTownFee;
 
     if (cart.length === 0) {
         alert("Your cart is empty. Please add items to your cart before checking out.");
         return; 
+    }
+
+    if (!selectedTownFee || isNaN(selectedTownFee)) {
+        alert("Please select a town to calculate the shipping fee.");
+        return;
+    }
+
+    if (!paymentMethod) {
+        alert("Please select a payment method.");
+        return;
     }
 
     let itemDetails = "You have purchased the following items:\n";
@@ -218,7 +229,8 @@ function checkout() {
     });
 
     alert(itemDetails + "\nShipping Fee: ₱" + selectedTownFee.toFixed(2) +
-          "\nFinal Total: ₱" + finalTotal.toFixed(2));
+                        `\nPayment Method: ${paymentMethod}` +
+                        "\nFinal Total: ₱" + finalTotal.toFixed(2));
 
     alert("Purchase Successful! Thank you.");
 

@@ -6,11 +6,12 @@
     <title>EGE Corps.</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Pacifico&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
 		<div class="header-container">
-			<h1>Evo's Gadgets and Electronics &copy;</h1>
+			<h1>Evo's Gadgets and Electronics&copy;</h1>
             <div class="search">
                 <div class="search-bar">
                     <input type="text" placeholder="Search for items">
@@ -20,7 +21,7 @@
                     <ul class="nav-list">
                         <li><a href="https://www.ebay.ph/">Home</a></li>
                         <li><a href="https://www.youtube.com/@gcevocastanares1178">Support</a></li>
-                        <li><a href="#">About</a></li>
+                        <li><a href="file:///home/gcevocastanares/fanumstyle/index.html">About</a></li>
                         <li><a href="login.html">Login</a></li> <!-- New -->
                         <li><a href="signup.html">Signup</a></li> <!-- New -->
                     </ul>
@@ -43,7 +44,6 @@
             <option value="default">Default</option>
             <option value="price-low-high">Price: Low to High</option>
             <option value="price-high-low">Price: High to Low</option>
-            <option value="popularity">Popularity</option>
         </select>
     </div>
     
@@ -69,8 +69,19 @@
                 <input type="number" id="item-quantity" placeholder="Enter quantity" min="1" value="0" required>
             </div>
 
+            <button class="addToCart" onclick="addToCart()">Add to Cart</button>
+        </div>
+        <h2>Cart:</h2>
+        <div id="cart-items" class="cart"></div>
+        <hr>
+        <div id="cart-total">
+            <p>Subtotal: <span id="subtotal-price">₱0.00</span></p>
+            <p>Shipping Fee: <span id="shipping-fee">₱0.00</span></p>
+            <p>Total: <span id="total-price">₱0.00</span></p>
+        </div>
+        <div class="town-payment">
             <label for="town">Select your town:</label>
-                <select id="towns" onchange="updateTotal()" required>
+                <select id="towns" onchange="updateTotal()">
                     <option value="default" selected>Select Town...</option>
                     <option value="50">Tubigon - ₱50</option>
                     <option value="60">Clarin - ₱60</option>
@@ -82,27 +93,16 @@
                     <option value="110">Ubay - ₱110</option>
                 </select>
             <br>
-            <br>
             <label for="payment">Select Payment Method:</label>
-                <select id="payment" name="payment" required>
-                    <option value="default" selected>Select payment method...</option>
-                    <option value="credit">Credit Card</option>
-                    <option value="gcash">GCash</option>
-                    <option value="cash">Cash on Delivery</option>
-                    <option value="paypal">PayPal</option>
+                <select id="payments">
+                    <option value="">Select payment method...</option>
+                    <option value="Credit Card">Credit Card</option>
+                    <option value="Gcash">GCash</option>
+                    <option value="Cash">Cash on Delivery</option>
+                    <option value="Paypal">PayPal</option>
                 </select>
             <br>
-            <br>
-            <button class="addToCart" onclick="addToCart()">Add to Cart</button>
-        </div>
-        <h2>Cart:</h2>
-        <div id="cart-items" class="cart"></div>
-<hr>
-        <div id="cart-total">
-            <p>Subtotal: <span id="subtotal-price">₱0.00</span></p>
-            <p>Shipping Fee: <span id="shipping-fee">₱0.00</span></p>
-            <p>Total: <span id="total-price">₱0.00</span></p>
-        </div>
+        </div>   
         <div class="checkout">
             <button onclick="checkout()">Proceed to Checkout</button>
         </div>
